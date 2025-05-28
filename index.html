@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baguio Beach</title>
+<style>
+  :root {
+    --bg-color: #fffaf0;
+    --text-color: white;
+    --box-color: rgb(121, 85, 72, 0.85);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times new Roman', serif;
+    background: url('bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+    background: rgba(93, 64, 55, 0.7);
+    color: #FFF3E0;
+  }
+
+  header h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(93, 64, 55, 0.9);
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav button {
+    background: none;
+    border: none;
+    color: #FFF3E0;
+    font-size: 1em;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  nav button:hover {
+    background-color: greenyellow;
+    border-radius: 5px;
+  }
+
+
+  .section {
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--box-color);
+    padding: 30px;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .section.active {
+    display: block;
+  }
+
+  ul {
+    padding-left: 20px;
+    line-height: 1.8;
+    list-style: disc;
+  }
+
+  .slideshow img,
+  .video-gallery video,
+  .facility-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+  }
+
+  .fb-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .facility-item {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 800px) {
+    .section {
+      text-align: center;
+      padding: 100px;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      width: 90vw;
+      max-width: none;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      padding: 40px;
+    }
+
+    header {
+      padding: 60px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 4em;
+    }
+
+    header p {
+      font-size: 1.5em;
+    }
+
+    nav button {
+      font-size: 1.2em;
+      padding: 12px 20px;
+    }
+
+    .facility-img,
+    .slideshow img,
+    .video-gallery video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .video-gallery video {
+      max-height: 80vh;
+    }
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(93, 64, 55, 0.9);
+    color: #FFF3E0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Paloma's Beach Resort</h1>
+    <p>Lower Bayao, Tukuran, Zamboanga Del Sur</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('rules')">Safety & Rules</button>
+    <button onclick="showSection('photos')">Photos & Videos</button>
+    <button onclick="showSection('facilities')">Facilities</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <div id="home" class="section active">
+    <h2>Welcome to Paloma's Beach Resort⛵</h2>
+    <p>A peaceful beach perfect for getaways and family & Friends bonding.</p>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Paloma's Beach Resort</h2>
+    <ul>
+      <li>Entrance Fee: ₱50 per head. Free if renting a cottage.</li>
+      <li>Cottage: ₱300(Weekdays)- ₱500(Weekends) 15 persons per cottage</li>
+      
+      <li>Overnight Stay: ₱800 per cottage (6:00 PM - 6:30 AM)</li>
+      <li>Parking Fee: Free</li>
+      <li>Opening Time: 7:00 AM</li>
+      <li>Closing Time: 5:30 PM</li>
+      <li>Lifeguard on Duty: 7:00 AM – 5:30 PM</li>
+      <li>Visitors: Mixed(Local & Foreign)</li>
+      <li>Most Visiting Months: December</li>
+      <li>Owner: Marianette Marcaban</li>
+  
+    </ul>
+  </div>
+
+  <div id="rules" class="section">
+    <h1>Safety & Rules</h1>
+    <ul>
+      <li>Watch your children at all times.</li>
+      <li>Swim within designated areas only.</li>
+      <li>Always follow the warning signs.</li>
+      <li>Never swim after consuming alcohol.</li>
+      <li>Always keep your trash in the trashcan.</li>
+    </ul>
+  </div>
+
+<div id="photos" class="section">
+  <h1>Photos & Videos</h1>
+  <div class="slideshow">
+    <img src="1.jpg" alt="photo 1" />
+    <img src="two.jpg" alt="photo 2" />
+    <img src="tri.jpg" alt="photo 3" />
+    <img src="por.jpg" alt="photo 4" />
+    <img src="five.jpg" alt="photo 5" />
+    <img src="six.jpg" alt="photo 6" />
+    <img src="seven.jpg" alt="photo 7" />
+    <img src="eight.jpg" alt="photo 8" />
+    <img src="nine.jpg" alt="photo 9" />
+    <img src="ten.jpg" alt="photo 10" />
+    <img src="eleven.jpg" alt="photo 11" />
+  </div>
+
+  <div class="video-gallery">
+    <video controls src="vid1.mp4" alt="Clip 1"></video>
+    <video controls src="vid2.mp4" alt="Clip 2"></video>
+  </div>
+</div>
+  <div id="facilities" class="section">
+    <h1>Facilities:</h1>
+    <div class="facility-item">
+      <h1>Comfort rooms</h1>
+      <img class="facility-img" src="cr.jpg" alt="Comfort Room" /> <img class="facility-img" src="cr1.jpg" alt="Comfort room" /> <img class="facility-img" src="shower.jpg" alt="Comfort Room" />
+    </div>
+    
+    <div class="facility-item">
+      <h1>Parking Area</h1>
+      <img class="facility-img" src="park1.jpg" alt="Parking Area" />
+      <img class="facility-img" src="park2.jpg" alt="Parking Area" />
+<img class="facility-img" src="park3.jpg" alt="Parking Area" />   <img class="facility-img" src="park4.jpg" alt="Parking Area" />
+    </div>
+    <div class="facility-item">
+      <h1>Cottages</h1>
+      <img class="facility-img" src="cot1.jpg" alt="Cottages" />
+         <img class="facility-img" src="cot2.jpg" alt="Cottages" />
+<img class="facility-img" src="cot3.jpg" alt="Cottages="facility-img" src="cot4.jpg" alt="Cottages" />
+<img class="facility-img" src="cot5.jpg" alt="Cottages" />
+         <img class="facility-img" src="cot6.jpg" alt="Cottages" />
+<img class="facility-img" />
+      </div>
+    <div class="facility-item">
+      <h1>Grilling Station</h1>
+      <img class="facility-img" src="grill.jpg" alt="Grilling Station" />
+          </div>
+          <div class="facility-item">
+      <h1>Washing Station</h1>
+      <img class="facility-img" src="wash.jpg" alt="Washing Station" />
+          </div>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact Them:</h2>
+    <p>Find us on Facebook:</p>
+    <a href="https://www.facebook.com/palomasbeachresort"
+     
+    <p>09383962772 - TNT</p>
+      <img src="fb.png" alt="Facebook Logo" class="fb-logo">
+      Paloma's Beach Resort
+    </a>
+  </div>
+
+  <footer>
+    Uploaded by: J-ALEN M./GHIYAN A.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+        </html>
